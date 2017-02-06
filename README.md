@@ -3,10 +3,14 @@
 * [Original source code](https://github.com/eventuate-examples/eventuate-examples-java-spring-todo-list)
 * Set variable [DOCKER_HOST_IP](http://eventuate.io/docs/usingdocker.html)
 
+# Docker
+Two different ways of running Eventuate is provided - external and local.
+For external - check files docker-compose.yml, for local - docker-compose-eventuate-local.yml.
+
 # Check virtual machine ID (to set it as DOCKER_HOST_IP)
     docker-machine ip
 
-# For standalone
+# For Eventuate LOCAL
 Check is DOCKER_HOST_IP is set:
 
     echo $DOCKER_HOST_IP
