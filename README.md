@@ -58,7 +58,8 @@ To work with Eventuate we should create:
         public AggregateRepository<TodoAggregate, TodoCommand> aggregateRepository(EventuateAggregateStore eventStore) {
             return new AggregateRepository<>(TodoAggregate.class, eventStore);
         }
- * Services that are invoked by external requests and update aggregates by sending them commands. Example: TodoService
+ * Services that are invoked by external requests and update aggregates by sending them commands. Example: TodoService.
+Check [How Eventuate Works](http://eventuate.io/howeventuateworks.html) for details
  * Event handlers that subscribe to domain events and do one of three things:
     - Update aggregates
     - Update materialized views
