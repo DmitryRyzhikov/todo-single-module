@@ -54,10 +54,10 @@ To work with Eventuate we should create:
   as Spring bean in any necessary service. Check TodoBackendConfiguration:
 
 
-    @Bean
-    public AggregateRepository<TodoAggregate, TodoCommand> aggregateRepository(EventuateAggregateStore eventStore) {
-        return new AggregateRepository<>(TodoAggregate.class, eventStore);
-    }
+        @Bean
+        public AggregateRepository<TodoAggregate, TodoCommand> aggregateRepository(EventuateAggregateStore eventStore) {
+            return new AggregateRepository<>(TodoAggregate.class, eventStore);
+        }
  * Services that are invoked by external requests and update aggregates by sending them commands. Example: TodoService
  * Event handlers that subscribe to domain events and do one of three things:
     - Update aggregates
